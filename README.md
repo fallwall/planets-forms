@@ -52,3 +52,4 @@ Render the data using erb.
 
 ## Resources 
 - [Rails Guides](https://guides.rubyonrails.org/v5.0/)
+- [Forms on Rails Guides](https://guides.rubyonrails.org/form_helpers.html)
