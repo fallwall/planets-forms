@@ -49,3 +49,6 @@ Render the data using erb.
 ## Bonus
 
 - Implement the `destroy` and `update` actions
+
+## Resources 
+- [Rails Guides](https://guides.rubyonrails.org/v5.0/)
