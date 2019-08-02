@@ -11,7 +11,7 @@ The "finished" state of this lab should be a rails app for creating and viewing 
 ## Setup
 
 - in terminal, navigate to the directory where you store projects
-- run `rails new planet_server -d postgresql`
+- run `rails new planet_server -G --databe=postgresql`
 - `cd` into the directory
 - run `rails db:setup` and `rails db:migrate`
 - Finally, spin up the server with `rails s`
