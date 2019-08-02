@@ -10,10 +10,10 @@ The "finished" state of this lab should be a rails app for creating and viewing 
 
 ## Setup
 
-- in terminal, navigate to the directory where you store projects
-- run `rails new planet_server -G --database=postgresql`
+- fork and clone
+- - `cd` into the repo directory
+- run `rails new . -G --database=postgresql`
  - the `-G` prevents rails from making a new `.git` repo inside the rails app. 
-- `cd` into the directory
 - run `rails db:create`
 
 ## The Routes + Controller
