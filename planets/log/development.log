@@ -1,0 +1,378 @@
+  [1m[35m (444.6ms)[0m  [1m[35mCREATE DATABASE "planets_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (335.8ms)[0m  [1m[35mCREATE DATABASE "planets_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (200.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planets_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (184.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planets_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (387.3ms)[0m  [1m[35mCREATE DATABASE "planets_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (396.2ms)[0m  [1m[35mCREATE DATABASE "planets_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7322903539194960465)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePlanets (20190803020602)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "planets" ("id" bigserial primary key, "name" character varying, "num_moons" integer, "color" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190803020602_create_planets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190803020602"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-03 02:06:11.749363"], ["updated_at", "2019-08-03 02:06:11.749363"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7322903539194960465)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlanet Create (0.7ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sun"], ["num_moons", 199], ["color", "bright burning red"], ["created_at", "2019-08-03 02:07:06.784826"], ["updated_at", "2019-08-03 02:07:06.784826"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlanet Create (0.4ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "jupiter"], ["num_moons", 67], ["color", "pink?"], ["created_at", "2019-08-03 02:08:26.191351"], ["updated_at", "2019-08-03 02:08:26.191351"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlanet Create (0.3ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "uranus"], ["num_moons", 62], ["color", "purple"], ["created_at", "2019-08-03 02:09:02.092121"], ["updated_at", "2019-08-03 02:09:02.092121"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlanet Create (0.4ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "neptune"], ["num_moons", 14], ["color", "yellow"], ["created_at", "2019-08-03 02:10:05.005576"], ["updated_at", "2019-08-03 02:10:05.005576"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlanet Create (0.5ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "saturn"], ["num_moons", 66], ["color", "gold"], ["created_at", "2019-08-03 02:10:41.750513"], ["updated_at", "2019-08-03 02:10:41.750513"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-08-02 22:27:44 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/xx/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/xx/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/xx/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ping" for ::1 at 2019-08-02 22:27:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ping"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/planets" for ::1 at 2019-08-02 22:27:48 -0400
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:2
+  Rendered planets/index.html.erb within layouts/application (228.9ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f9e3a1a8d50>:0x00007f9e3964eab8>
+Did you mean?  super):
+    1: <h2>List of Planets</h2>
+    2: <% @planets.each do |planet| %>
+    3:   <p><%= link_to user.name, planet %></p>
+    4: <% end %>
+  
+app/views/planets/index.html.erb:3:in `block in _app_views_planets_index_html_erb___1052503316200755373_70158778191440'
+app/views/planets/index.html.erb:2:in `_app_views_planets_index_html_erb___1052503316200755373_70158778191440'
+Started GET "/planets" for ::1 at 2019-08-02 22:28:17 -0400
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:2
+  Rendered planets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 220ms (Views: 219.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets/1" for ::1 at 2019-08-02 22:28:19 -0400
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:8
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 11.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planets/5" for ::1 at 2019-08-02 22:28:22 -0400
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:8
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets/new" for ::1 at 2019-08-02 22:28:27 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @planet do |f| %>
+    2:   <%= f.text_field :name, placeholder: "Name" %>
+    3:   <%= f.text_field :num_moons, placeholder: "Num_Moons" %>
+    4:   <%= f.text_field :color, placeholder: "Color" %>
+  
+app/views/planets/new.html.erb:1:in `_app_views_planets_new_html_erb__4113884167971764835_70158763050620'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:30:10 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Create New User</h2>
+    2: 
+    3: 
+    4: <%= form_for @planet do |f| %>
+    5:   <%= f.text_field :name, placeholder: "Name" %>
+    6:   <%= f.text_field :num_moons, placeholder: "Num_Moons" %>
+    7:   <%= f.text_field :color, placeholder: "Color" %>
+  
+app/views/planets/new.html.erb:4:in `_app_views_planets_new_html_erb__4113884167971764835_70158825411520'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:30:27 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Create New User</h2>
+    2: 
+    3: <%= form_for @planet do |f| %>
+    4:   <%= f.text_field :name, nil, placeholder: "Name" %>
+    5:   <%= f.text_field :num_moons, placeholder: "Num_Moons" %>
+    6:   <%= f.text_field :color, placeholder: "Color" %>
+  
+app/views/planets/new.html.erb:3:in `_app_views_planets_new_html_erb__4113884167971764835_70158815554900'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:32:13 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Create New Planet</h2>
+    2: 
+    3: <%= form_for @planet do |f| %>
+    4:   <%= f.text_field :name, nil, placeholder: "Name" %>
+    5:   <%= f.text_field :num_moons, nil, placeholder: "Num_Moons" %>
+    6:   <%= f.text_field :color, nil, placeholder: "Color" %>
+  
+app/views/planets/new.html.erb:3:in `_app_views_planets_new_html_erb__4113884167971764835_70158763687460'
+Started GET "/planets" for ::1 at 2019-08-02 22:32:17 -0400
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:2
+  Rendered planets/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets/new" for ::1 at 2019-08-02 22:32:18 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Create New Planet</h2>
+    2: 
+    3: <%= form_for @planet do |f| %>
+    4:   <%= f.text_field :name, nil, placeholder: "Name" %>
+    5:   <%= f.text_field :num_moons, nil, placeholder: "Num_Moons" %>
+    6:   <%= f.text_field :color, nil, placeholder: "Color" %>
+  
+app/views/planets/new.html.erb:3:in `_app_views_planets_new_html_erb__4113884167971764835_70158762937900'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:33:31 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    1: <h2>Create New Planet</h2>
+    2: <%= form_for @planet do |f| %>
+    3:   <%= f.text_field :name, nil, placeholder: "Name" %>
+    4:   <%= f.text_field :num_moons, nil, placeholder: "Num_Moons" %>
+    5:   <%= f.text_field :color, nil, placeholder: "Color" %>
+    6:   <%= f.submit "Submit"%>
+  
+app/views/planets/new.html.erb:3:in `block in _app_views_planets_new_html_erb__4113884167971764835_70158763767680'
+app/views/planets/new.html.erb:2:in `_app_views_planets_new_html_erb__4113884167971764835_70158763767680'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:33:32 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    1: <h2>Create New Planet</h2>
+    2: <%= form_for @planet do |f| %>
+    3:   <%= f.text_field :name, nil, placeholder: "Name" %>
+    4:   <%= f.text_field :num_moons, nil, placeholder: "Num_Moons" %>
+    5:   <%= f.text_field :color, nil, placeholder: "Color" %>
+    6:   <%= f.submit "Submit"%>
+  
+app/views/planets/new.html.erb:3:in `block in _app_views_planets_new_html_erb__4113884167971764835_70158816420740'
+app/views/planets/new.html.erb:2:in `_app_views_planets_new_html_erb__4113884167971764835_70158816420740'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:33:45 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (154.3ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<#<Class:0x00007f9e38626780>:0x00007f9e3fc982b0>):
+    6:   <%= f.submit "Submit"%>
+    7: <% end %>
+    8: 
+    9: <p><%= link_to "Users List", users_path %>
+  
+app/views/planets/new.html.erb:9:in `_app_views_planets_new_html_erb__4113884167971764835_70158825866620'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:34:02 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (196.0ms)
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `panets_path' for #<#<Class:0x00007f9e38626780>:0x00007f9e3eb16988>
+Did you mean?  planets_path
+               planet_path):
+    6:   <%= f.submit "Submit"%>
+    7: <% end %>
+    8: 
+    9: <p><%= link_to "All Planets", panets_path %>
+  
+app/views/planets/new.html.erb:9:in `_app_views_planets_new_html_erb__4113884167971764835_70158816688360'
+Started GET "/planets/new" for ::1 at 2019-08-02 22:34:09 -0400
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/planets" for ::1 at 2019-08-02 22:34:15 -0400
+Processing by PlanetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9tFVgDOm7nIKaFYXfc5ST+vQQP8/SQsRPDnNTHQa+deB9yiTmHFm59lWMtkfjyCjf15aQyjkpqJFr0kFbCDOA==", "planet"=>{"name"=>"New Planet", "num_moons"=>"2", "color"=>"red"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/planets_controller.rb:14
+  [1m[36mPlanet Create (0.4ms)[0m  [1m[32mINSERT INTO "planets" ("name", "num_moons", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "new planet"], ["num_moons", 2], ["color", "red"], ["created_at", "2019-08-03 02:34:15.980057"], ["updated_at", "2019-08-03 02:34:15.980057"]]
+  ↳ app/controllers/planets_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/planets_controller.rb:14
+Redirected to http://localhost:3000/planets/6
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/planets/6" for ::1 at 2019-08-02 22:34:15 -0400
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:9
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/planets/6" for ::1 at 2019-08-02 22:34:17 -0400
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wwLgPkhNdBKQrHKMvso1JzOsIUtt0D3Q2VwwOOVL5vAW3nnKBuIqMMfgix+HQzDsgf4ZIZ2Oi2YUumopwSsOLw==", "commit"=>"Delete new planet", "id"=>"6"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/planets_controller.rb:20
+  [1m[36mPlanet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/planets_controller.rb:20
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/planets_controller.rb:20
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/planets" for ::1 at 2019-08-02 22:34:17 -0400
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:2
+  Rendered planets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for ::1 at 2019-08-02 22:34:18 -0400
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:2
+  Rendered planets/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets/2" for ::1 at 2019-08-02 22:34:21 -0400
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:9
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+

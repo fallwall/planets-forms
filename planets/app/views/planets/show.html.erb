@@ -1,0 +1,7 @@
+<h2><%= @planet.name %></h2>
+<p><%= @planet.num_moons %></p>
+<p><%= @planet.color %></p>
+
+<%= form_for @planet, html: {method: "delete"} do |f| %>
+  <%= f.submit "Delete #{@planet.name}" %>
+<% end %>
