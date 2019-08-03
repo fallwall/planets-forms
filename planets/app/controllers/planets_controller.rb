@@ -4,7 +4,7 @@ class PlanetsController < ApplicationController
   end
   def random
     @planets = Planet.all
-    @planet = Planet.find(rand(@planets.length))
+    @planet = Planet.find(rand(1..@planets.length))
   end
   def index
     @planets = Planet.all
