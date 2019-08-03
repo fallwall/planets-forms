@@ -2,6 +2,10 @@ class PlanetsController < ApplicationController
   def new
     @planet = Planet.new
   end
+  def random
+    @planets = Planet.all
+    @planet = Planet.find(rand(@planets.length))
+  end
   def index
     @planets = Planet.all
   end
