@@ -20,6 +20,15 @@ class PlanetsController < ApplicationController
     @planet.destroy
     redirect_to planets_path
   end
+  def edit
+    @planet = Planet.find(params[:id])
+  end
+  def update
+    @planet = Planet.find(params[:id])
+    if @planet.update_attributes(planet_params)
+      redirect_to @planet
+    end
+  end
   private
   def planet_params
     params.require(:planet).permit(:name, :num_moons, :color)
