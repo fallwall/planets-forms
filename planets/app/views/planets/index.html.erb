@@ -1,8 +1,17 @@
-<h2>List of Planets</h2>
+<p></p>
+<p></p>
+<h2>ALL PLANETS</h2>
+<div class="link-button">
+  <%= link_to 'CREATE MEW PLANET', new_planet_path  %>
+</div>
+
+<div class="link-button">
+  <%= link_to 'GET A RANDOM PLANET', '/random' %>
+</div>
+
 <% @planets.each do |planet| %>
-  <p><%= link_to planet.name, planet %></p>
+  <div class="planet"><%= link_to planet.name, planet %></div>
 <% end %>
-<%= link_to 'Create New Planet', new_planet_path  %>
-<%= link_to 'See a Random Planet', '/random' %>
+
 
 

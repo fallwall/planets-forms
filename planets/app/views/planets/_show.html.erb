@@ -1,7 +1,8 @@
-<h2><%= @planet.name %></h2>
-<p><%= @planet.num_moons %></p>
-<p><%= @planet.color %></p>
-<p><%= link_to "Edit", edit_planet_path(@planet) %></p>
+<h2><%=  @planet.name %></h2>
+<p><strong>NUM_MOONS | </strong> <%= @planet.num_moons %></p>
+<p><strong>COLOR | </strong> <%= @planet.color %></p>
+<%= link_to "Edit", edit_planet_path(@planet), :class => 'link-button' %>
+
 <%= form_for @planet, html: {method: "delete"} do |f| %>
-  <%= f.submit "Delete #{@planet.name}" %>
+  <%= f.submit "Delete #{@planet.name}", :class => 'link-button' %>
 <% end %>

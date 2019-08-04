@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  color: black;
+  font-family: 'Ultra', serif;
+}
+
+.header {
+  border: black solid 2px;
+  padding: 20px 30px;
+  z-index:2;
+  position:absolute;
+  right:20vw;
+  top:40vh;
+  background-image: url("https://media.giphy.com/media/G1T5M0qT6ZJlu/giphy.gif");
+}
+
+ a {
+   text-decoration: none;
+   color:black;
+ }
+
+ a:hover {
+   text-decoration: underline;
+ }
+
+ .planet, p {
+  padding: 1em;
+ }
+
+ .link-button {
+   padding: 10px 15px;
+   margin: 10px;
+   width: 250px;
+   text-align: center;
+   font-size: 1.5em;
+ }
+
+ 
+
+
+
+

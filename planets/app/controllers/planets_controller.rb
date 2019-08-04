@@ -5,6 +5,11 @@ class PlanetsController < ApplicationController
   def random
     @planets = Planet.all
     @planet = Planet.find(rand(1..@planets.length))
+    if @planet 
+      redirect_to planet_path(@planet)
+     else
+      redirect_to planets_path
+     end
   end
   def index
     @planets = Planet.all
